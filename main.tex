@@ -1,0 +1,63 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+% \usetheme{Frankfurt}
+% \usetheme{Darmstadt}
+% \usetheme{Berlin}
+% \usetheme{Warsaw}
+% \usetheme{Berkeley}
+% \usetheme{Bergen}
+% \usetheme{CambridgeUS}
+% \usetheme{Copenhagen}
+
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\mysolution}{\noindent \textbf{Solution: }}
+
+\title{AI1110 - Probability and Random Variables\\
+        Assignment 13}
+\author{Aakash Kamuju (ai21btech11001)}
+\begin{document}
+\maketitle
+    % \begin{frame}{Table of Contents}
+    % \tableofcontents
+    % \end{frame}
+    \begin{frame}{Outline}
+    \tableofcontents
+    \end{frame}
+    \begin{frame}{Question}
+        \begin{section}{Question}
+            \begin{block}{Example-15.24}
+   Referring to the imbedded Markov chain formulation.
+using the transition matrix the system of equations in $q_j = \Sigma q_jp_{ij}$ reduces to 
+$$q_j = q_0 a_0 + \sum_{i=1} ^{j+1} q_i a_{j - i +1}$$.Then find Q(z)?
+   \end{block}
+    \end{section}
+    \end{frame}
+    \begin{frame}{Solution}
+        \begin{section}{Solution}
+            \begin{block}{Solution}
+             $$Q(z) = \sum_{j = 0} ^{\infty} q_j z^j$$
+              $$A(z) = \sum_{k = 0} ^{\infty} a_k z^k$$
+              so by using the given equation, we get
+        \end{block}
+       \end{section}
+  \end{frame}
+  \begin{frame}
+        \begin{section}{Solution}
+            \begin{block}{Solution}
+          $$Q(z)= q_0 \sum_{j = 0} ^{\infty} a_j z^j + \sum_{j = 0} ^{\infty} \sum_{i = 1} ^{j + 1}q_i a_{j-i+1} z^j$$
+          $$Q(z) = q_0 A(z) + \sum_{i = 1} ^{\infty} q_i z^i \sum _{m = 0} ^{\infty} a_m z^m. z^{-1}$$
+          $$Q(z) = q_0 A(Z) + (Q(z) - q_0)A(z)/z$$
+          From this we get,
+
+        \end{block}
+       \end{section}
+  \end{frame}
+  \begin{frame}
+        \begin{section}{Solution}
+            \begin{block}{Solution}
+           $$Q(z) = \frac{q_0(1 - z)A(z)}{A(z) - z}$$
+        \end{block}
+       \end{section}
+  \end{frame}
+   \end{document}
